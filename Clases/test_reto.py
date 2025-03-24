@@ -1,7 +1,14 @@
 import reto
 mi_auto = reto.auto("Chevrolet", "Picanto", 2018)
-mi_auto.mostrar_informacion()
+tu_auto = reto.auto("Mazda","evo", 2012)
 
-mi_auto.actualizar_kilometraje(20000)
-mi_auto.realizar_viaje(-2)
-mi_auto.estado_auto()
+
+print(reto.auto.comparar_kilometraje(mi_auto, tu_auto))
+print(reto.auto.esAutoClasico(tu_auto))
+
+#Métodos de Clase
+auto_economico = reto.auto.crear_auto_economico()
+print(auto_economico.__dict__)
+
+auto_premiun = reto.auto.crear_auto_premium()
+print(auto_premiun.__dict__)

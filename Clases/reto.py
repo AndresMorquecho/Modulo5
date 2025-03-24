@@ -27,7 +27,28 @@ class auto:
         elif self.kilometraje >100000:
             print(f" Y déjame descansar por favor !!!!  {self.kilometraje} km")
             
+    @staticmethod
+    def comparar_kilometraje(auto1, auto2):
+        if auto1.kilometraje == auto2.kilometraje:
+            return(f"el kilometraje del auto {auto1.marca} ({auto1.kilometraje}) es igual al kilometraje del auto {auto2.marca} ({auto2.kilometraje})")
+        else:
+            return(f"el kilometraje del auto {auto1.marca} ({auto1.kilometraje}) no es igual al kilometraje del auto {auto2.marca} ({auto2.kilometraje})")
+    
+    @staticmethod
+    def esAutoClasico(auto):
+        if auto.año < 2004:
+            return (f"El auto {auto.marca} es considera clasico")
+        else:
+            return (f"El auto {auto.marca} no es considera clasico")
+     
             
+    @classmethod
+    def crear_auto_economico(cls):
+        return cls(marca = "Generico", modelo = "Eco-2025", año = 2025) 
+    
+    @classmethod
+    def crear_auto_premium(cls):
+        return cls(marca = "Premiun", modelo = "Alta-gama", año = 2025)       
                     
         
         
