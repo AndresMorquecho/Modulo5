@@ -19,3 +19,11 @@ laptop_rtx = laptop_gaming("Asus","i7",4,"RTX 8GB")
 laptop_empresarial = Laptop_business("Dell","intel i7",16, "SSD 1 TB", 4)
 
 print(laptop_empresarial.realizar_diagnostico_sistema())
+
+def imprimir_informe(laptop):
+   informe =  laptop.realizar_informe_uso()
+   for clave, valor in informe.items():
+       print(f"{clave}: {valor}")
+       print("\n")
+       
+imprimir_informe(laptop_rtx)

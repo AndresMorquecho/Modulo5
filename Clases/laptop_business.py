@@ -28,3 +28,15 @@ class Laptop_business(Laptop):
             resultado[i] = valor            
             x +=1 
         return resultado
+    def __str__(self):
+        return (
+
+        f" {'Marca:':<15} {self.marca:<15} \n"
+        f" {'Procesador:':<15} {self.procesado:<15} \n"
+        f" {'Memoria:':<15} {self.memoria:<15} \n"
+        f" {'Almacenamiento:':<15} {self.almacenamiento:<15} \n"
+        f" {'Duración Batería:':<15} {self.duracion_bateria:<15} \n"
+        f" {'Costo:':<15} ${self.costo:<14} \n"
+        f" {'Impuesto:':<15} {self.impuesto}%{'':<13} \n"
+ 
+    )
